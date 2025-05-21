@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Звіт з курсу WEB Forms</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 100%;
+      border: 2px solid black;
+      padding: 20px;
+      position: relative;
+    }
+
+    .header {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .layout {
+      display: flex;
+    }
+
+    .sidebar {
+      width: 25%;
+      padding-right: 10px;
+    }
+
+    .sidebar .btn {
+      border: 2px solid black;
+      border-radius: 20px;
+      padding: 10px;
+      margin-bottom: 10px;
+      text-align: center;
+      background-color: #f0f0f0;
+      font-weight: bold;
+    }
+
+    .sidebar a {
+      color: blue;
+      text-decoration: none;
+    }
+
+    .main-content {
+      width: 75%;
+      border: 1px solid black;
+      padding: 20px;
+      min-height: 300px;
+      position: relative;
+    }
+
+    .main-content p {
+      margin: 10px 0;
+    }
+
+    .photo {
+      position: absolute;
+      top: 0;
+      right: -140px;
+      width: 120px;
+      height: 160px;
+      border: 1px solid black;
+      text-align: center;
+      font-size: 12px;
+      padding-top: 60px;
+      background-color: #fff;
+    }
+
+    .footer {
+      margin-top: 10px;
+      font-size: 12px;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <p>ЗВІТ<br>з курсу</p>
+    <p>З ДИСЦИПЛІНИ «WEB-ОРІЄНТОВАНІ ТЕХНОЛОГІЇ. ОСНОВИ FRONTEND та BACKEND РОЗРОБКИ»</p>
+    <p>Студент гр. ІО-з21 ПІБ Батюк Богдан-Даниїл Олегович</p>
+  </div>
+
+  <div class="layout">
+    <div class="sidebar">
+      <div class="btn">
+        НАЗВА КУРСУ<br>
+        <a href="https://ua.udemy.com/course/master-web-forms/" target="_blank">WEB Forms</a>
+      </div>
+
+      <div class="btn">
+        Посилання на репозиторій<br>
+        <em>[тут буде посилання]</em>
+      </div>
+
+      <div class="btn">
+        СЕРТИФІКАТ з БАЛАМИ<br>
+        <a href="file:///C:/Users/yomad/Documents/var2/photos/2.pdf" target="_blank">Мій сертифікат</a>
+      </div>
+
+      <div class="btn">
+        ЗМІСТ курсу<br>
+        <a href="https://ua.udemy.com/course/master-web-forms/learn/lecture/22176482#overview" target="_blank">Назви розділів</a>
+      </div>
+
+      <div class="btn">
+        ТЕСТИ по темам<br>
+        На жаль, не можна пересилати свої результати іншим.
+      </div>
+
+      <div class="btn">
+        ВИСНОВКИ<br>
+        <div style="font-weight: normal; text-align: justify; margin-top: 10px;">
+          Під час проходження курсу я ознайомився з основами створення веб-форм, їх валідацією, інтеграцією з backend, а також кращими практиками UI/UX для форм. Ці знання є надзвичайно важливими для побудови зручного та функціонального інтерфейсу користувача. Дякую за можливість пройти цей курс.
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="photo">
+        ФОТО<br>студента
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
