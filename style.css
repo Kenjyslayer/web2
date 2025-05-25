@@ -16,6 +16,7 @@ body {
   border: 2px solid #ccc;
   padding: 20px;
   background-color: #ffffff;
+  position: relative;
 }
 
 /* Заголовок */
@@ -24,6 +25,7 @@ body {
   font-weight: bold;
   margin-bottom: 20px;
   color: #3b3b3b;
+  position: relative;
 }
 
 .layout {
@@ -93,13 +95,13 @@ body {
     text-align: justify;
   }
 
-/* Фото */
+/* Маленька фотографія у правому верхньому куті */
 .photo {
   position: absolute;
   top: 0;
-  right: -140px;
-  width: 120px;
-  height: 160px;
+  right: 0;
+  width: 100px;
+  height: 130px;
   border: 1px solid #bbb;
   background-color: #fff;
   overflow: hidden;

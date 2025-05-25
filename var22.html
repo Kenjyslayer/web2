@@ -3,137 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <title>Звіт з курсу WEB Forms</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      width: 100%;
-      border: 2px solid black;
-      padding: 20px;
-      position: relative;
-    }
-
-    .header {
-      text-align: center;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-
-    .layout {
-      display: flex;
-    }
-
-    .sidebar {
-      width: 25%;
-      padding-right: 10px;
-    }
-
-    .sidebar .btn {
-      border: 2px solid black;
-      border-radius: 20px;
-      padding: 10px;
-      margin-bottom: 10px;
-      text-align: center;
-      background-color: #f0f0f0;
-      font-weight: bold;
-    }
-
-    .sidebar a {
-      color: blue;
-      text-decoration: none;
-    }
-
-    .main-content {
-      width: 75%;
-      border: 1px solid black;
-      padding: 20px;
-      min-height: 300px;
-      position: relative;
-    }
-
-    .main-content p {
-      margin: 10px 0;
-    }
-
-    .photo {
-      position: absolute;
-      top: 0;
-      right: -140px;
-      width: 120px;
-      height: 160px;
-      border: 1px solid black;
-      text-align: center;
-      font-size: 12px;
-      padding-top: 60px;
-      background-color: #fff;
-    }
-
-    .footer {
-      margin-top: 10px;
-      font-size: 12px;
-    }
-
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
-  <div class="header">
-    <p>ЗВІТ<br>з курсу</p>
-    <p>З ДИСЦИПЛІНИ «WEB-ОРІЄНТОВАНІ ТЕХНОЛОГІЇ. ОСНОВИ FRONTEND та BACKEND РОЗРОБКИ»</p>
-    <p>Студент гр. ІО-з21 ПІБ Батюк Богдан-Даниїл Олегович</p>
-  </div>
-
-  <div class="layout">
-    <div class="sidebar">
-      <div class="btn">
-        НАЗВА КУРСУ<br>
-        <a href="https://ua.udemy.com/course/master-web-forms/" target="_blank">WEB Forms</a>
+  <div class="container">
+    <div class="header">
+      <p>ЗВІТ<br>з курсу</p>
+      <p>З ДИСЦИПЛІНИ «WEB-ОРІЄНТОВАНІ ТЕХНОЛОГІЇ. ОСНОВИ FRONTEND та BACKEND РОЗРОБКИ»</p>
+      <p>Студент гр. ІО-з21 ПІБ Батюк Богдан-Даниїл Олегович</p>
+      <div class="photo">
+        <img src="photos/1.jpg" alt="Фото студента">
       </div>
+    </div>
 
-      <div class="btn">
-        Посилання на репозиторій<br>
-        <em>[тут буде посилання]</em>
-      </div>
+    <div class="layout">
+      <div class="sidebar">
+        <div class="btn">
+          НАЗВА КУРСУ<br>
+          <a href="https://ua.udemy.com/course/master-web-forms/" target="_blank">WEB Forms</a>
+        </div>
 
-      <div class="btn">
-        СЕРТИФІКАТ з БАЛАМИ<br>
-        <a href="file:///C:/Users/yomad/Documents/var2/photos/2.pdf" target="_blank">Мій сертифікат</a>
-      </div>
+        <div class="btn">
+          Посилання на репозиторій<br>
+          <a href="https://github.com/Kenjyslayer/web2.git" target="_blank">Репозиторій</a>
+        </div>
 
-      <div class="btn">
-        ЗМІСТ курсу<br>
-        <a href="https://ua.udemy.com/course/master-web-forms/learn/lecture/22176482#overview" target="_blank">Назви розділів</a>
-      </div>
+        <div class="btn">
+          СЕРТИФІКАТ з БАЛАМИ<br>
+          <a href="photos/2.pdf" target="_blank">Мій сертифікат</a>
+        </div>
 
-      <div class="btn">
-        ТЕСТИ по темам<br>
-        На жаль, не можна пересилати свої результати іншим.
-      </div>
+        <div class="btn">
+          ЗМІСТ курсу<br>
+          <a href="https://ua.udemy.com/course/master-web-forms/learn/lecture/22176482#overview" target="_blank">Назви розділів</a>
+        </div>
 
-      <div class="btn">
-        ВИСНОВКИ<br>
-        <div style="font-weight: normal; text-align: justify; margin-top: 10px;">
-          Під час проходження курсу я ознайомився з основами створення веб-форм, їх валідацією, інтеграцією з backend, а також кращими практиками UI/UX для форм. Ці знання є надзвичайно важливими для побудови зручного та функціонального інтерфейсу користувача. Дякую за можливість пройти цей курс.
+        <div class="btn">
+          <button onclick="showTests()">ТЕСТИ по темам</button>
+        </div>
+
+        <div class="btn">
+          <button onclick="showConclusions()">ВИСНОВКИ</button>
         </div>
       </div>
-    </div>
 
-    <div class="main-content">
-      <div class="photo">
-        ФОТО<br>студента
+      <div class="main-content" id="main-content">
+        <h3>Вітаю!</h3>
+        <p>Натисніть на кнопки ліворуч для перегляду тестів або висновків.</p>
       </div>
     </div>
   </div>
-</div>
+
+  <script>
+    const content = document.getElementById('main-content');
+
+    function showConclusions() {
+      content.innerHTML = `
+          <div>
+            <h3>Висновки</h3>
+            <p>Під час проходження курсу я ознайомився з основами створення веб-форм, їх валідацією, інтеграцією з backend, а також кращими практиками UI/UX для форм. Ці знання є надзвичайно важливими для побудови зручного та функціонального інтерфейсу користувача. Дякую за можливість пройти цей курс.</p>
+          </div>
+        `;
+    }
+
+    let testImages = [
+      "photos/4.png",
+      "photos/5.png",
+      "photos/6.png",
+      "photos/7.png",
+      "photos/8.png",
+      "photos/9.png",
+      "photos/10.png",
+      "photos/11.png",
+      "photos/12.png",
+      "photos/13.png",
+      "photos/14.png",
+      "photos/15.png",
+      "photos/16.png",
+      "photos/17.png"
+    ];
+    let currentTest = 0;
+
+
+    function showTests() {
+      content.innerHTML = `
+          <div style="text-align:center;">
+            <h3>Результати тестів</h3>
+            <img id="testImage" src="${testImages[currentTest]}" alt="Тест" style="max-width: 80%; height: auto; border: 1px solid #000; margin: 10px 0;">
+            <br>
+            <button onclick="prevImage()">← Назад</button>
+            <button onclick="nextImage()">Вперед →</button>
+          </div>
+        `;
+    }
+
+    function prevImage() {
+      if (currentTest > 0) currentTest--;
+      document.getElementById("testImage").src = testImages[currentTest];
+    }
+
+    function nextImage() {
+      if (currentTest < testImages.length - 1) currentTest++;
+      document.getElementById("testImage").src = testImages[currentTest];
+    }
+  </script>
 
 </body>
 </html>
